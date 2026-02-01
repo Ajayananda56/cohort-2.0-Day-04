@@ -1,17 +1,7 @@
-const express = require('express');
+// server ko start karna
 
-const app = express();
-const PORT = 3000;
+const app = require("./src/app");
 
-// Middleware
-app.use(express.json());
-
-// Routes
-app.get('/', (req, res) => {
-    res.send('Server is running!');
-});
-
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.listen(3000, ()=>{
+ console.log("server is running on port 3000")
+})
